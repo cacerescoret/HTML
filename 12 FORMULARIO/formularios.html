@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularios en HTML5</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+</head>
+<body>
+    <style>
+        button {
+            background-color: orange;
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+            border: none;
+        }
+    </style>
+    <h3>
+        Formulario básico con elemento label,
+        elemento input e input de envío.
+    </h3>
+    <form name="persona" method="post"
+          action="http://pagina.com/send.php">
+        <!-- Primer campo -->
+        <label for="usuario">Usuario</label>
+        <input type="text" name="usuario">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con input de búsqueda, 
+        sin botón y sin label</h3>
+    <form name="persona" method="post"
+          action="http://pagina.com/send.php">
+        <!-- Solo puede tener un campo -->
+        <input type="search" name="busqueda"
+               placeholder="Teclee y pulse intro">
+    </form>
+    <hr>
+    <h3>
+        Formulario con varios campos
+        y atributo autofocus
+    </h3>
+    <form name="persona" method="post"
+          action="http://pagina.com/send.php">
+        <!-- Primer campo -->
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre"
+               autofocus>
+        <!-- Segundo campo -->
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>
+        Formulario con varios campos
+        y atributo disabled
+    </h3>
+    <form name="persona" method="post"
+          action="http://pagina.com/send.php">
+        <!-- Primer campo -->
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre"
+               autofocus>
+        <!-- Segundo campo -->
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos">
+        <!-- Tercer campo -->
+        <label for="pais">Pais</label>
+        <input type="text" name="pais" 
+               value="España" disabled>
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar"
+                disabled>
+    </form>
+    <hr>
+    <h3>
+        Formulario con atributo size y maxlength
+    </h3>
+    <form name="persona" method="post"
+          action="http://pagina.com/send.php">
+        <!-- Primer campo -->
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre"
+               size=50 maxlength=20>
+        <!-- Segundo campo -->
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>
+        Formulario con campo de número
+    </h3>
+    <form name="persona" method="post"
+          action="http://pagina.com/send.php">
+        <label for="edad">Edad</label>
+        <input type="number" name="edad"
+               min=1>
+          <!-- Botón de envío -->
+          <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>
+        Otro formulario con campo de número
+    </h3>
+    <form name="cesta" method="post"
+          action="http://pagina.com/send.php">
+        <label for="producto">Producto</label>
+        <input type="text" name="producto">
+        <label for="cantidad">Cantidad</label>
+        <input type="number" name="cantidad"
+               min=10 max=100 step=5>
+          <!-- Botón de envío -->
+          <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>
+        Formulario con campo de correo
+        electrónico
+    </h3>
+    <form name="persona" method="post"
+          action="http://pagina.com/send.php">
+        <label for="correo">Correo Electrónico</label>
+        <input type="email" name="correo">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>
+        Formulario con campo de contraseña
+        y atributo required
+    </h3>
+    <form name="login" method="post"
+          action="http://pagina.com/send.php">
+        <label for="usuario">Usuario</label>
+        <input type="text" name="usuario"
+               required>
+        <label for="pass">Contraseña</label>
+        <input type="password" name="pass"
+               required>
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con atributo pattern</h3>
+    <form name="login" method="post"
+          action="http://pagina.com/send.php">
+        <label for="cp">Código Postal</label>
+        <input type="text" name="cp"
+               pattern="((0[1-9]|5[0-2])|[1-4][0-9])[0-9]{3}">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>
+        Formulario de inicio sesión con pattern
+        y title
+    </h3>
+    <form name="login" method="post"
+          action="http://pagina.com/send.php">
+        <label for="usuario">Usuario</label>
+        <input type="text" name="usuario"
+               required>
+        <label for="pass">Contraseña</label>
+        <input type="password" name="pass"
+               required
+               pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+               title="Utilice al menos una mayúscula
+                      una minúscula y un número">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar"
+               title="Pulse enviar 
+               para iniciar sesión">
+    </form>
+    <hr>
+    <h3>
+        Formulario con campo de fecha
+    </h3>
+    <form name="persona" method="post"
+          action="http://pagina.com/send.php">
+        <label for="nacimiento">
+            Fecha de nacimiento
+        </label>
+        <input type="date" name="nacimiento"
+               min="1900-01-01"
+               max="2020-12-31">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>
+        Formulario con campo de fecha y hora
+    </h3>
+    <form name="persona" method="post"
+          action="http://pagina.com/send.php">
+        <label for="inscripcion">
+            Fecha de inscripción
+        </label>
+        <input type="datetime-local" 
+               name="inscripcion">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>
+        Formulario con campo de mes
+    </h3>
+    <form name="persona" method="post"
+          action="http://pagina.com/send.php">
+        <label for="vacaciones">
+            Mes de vacaciones
+        </label>
+        <input type="month" 
+               name="vacaciones"
+               min="2018-01"
+               max="2018-12">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>
+        Formulario con campo de mes
+    </h3>
+    <form name="persona" method="post"
+          action="http://pagina.com/send.php">
+        <label for="vacaciones">
+            Semana de vacaciones
+        </label>
+        <input type="week" 
+               name="vacaciones"
+               min="2018-W01"
+               max="2018-W52">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>
+        Formulario con campo de hora
+    </h3>
+    <form name="persona" method="post"
+            action="http://pagina.com/send.php">
+        <label for="hora">
+            Hora
+        </label>
+        <input type="time" 
+                name="hora">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>
+        Formulario con radiobotones
+    </h3>
+    <form name="persona" method="post"
+            action="http://pagina.com/send.php">
+        <label>Hombre</label>
+        <input type="radio" name="sexo"
+               value="hombre">
+        <label>Mujer</label>
+        <input type="radio" name="sexo"
+                value="mujer">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>
+        Formulario con radiobotones y
+        campo premarcado
+    </h3>
+    <form name="gimnasio" method="post"
+            action="http://pagina.com/send.php">
+        <label>Tenis</label>
+        <input type="radio" name="deporte"
+               value="tenis" checked>
+        <label>Padel</label>
+        <input type="radio" name="deporte"
+                value="padel">
+        <label>Natación</label>
+        <input type="radio" name="deporte"
+                value="natacion">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con checkbox</h3>
+    <form name="encuesta" method="post"
+          action="http://pagina.com/send.php">
+        <label for="fotografia">
+            Fotografía
+        </label>
+        <input type="checkbox" name="fotografia"
+               value="si">
+        <label for="pintura">
+            Pintura
+        </label>
+        <input type="checkbox" name="pintura"
+                value="si">
+        <label for="escultura">
+                Escultura
+            </label>
+            <input type="checkbox" name="escultura"
+                    value="si">       
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con input color</h3>
+    <form name="encuesta" method="post"
+          action="http://pagina.com/send.php">
+        <label for="tono">
+            Seleccione su color
+        </label>
+        <input type="color" name="tono"
+               value="#ba1da0">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con input file</h3>
+    <form name="encuesta" method="post"
+          action="http://pagina.com/send.php">
+        <label for="archivo">Documento</label>
+        <input type="file" name="archivo"
+               multiple
+               accept="image/*"
+               capture="camera">
+        <!-- accept="image/*" cualquier imagen -->
+        <!-- accept="video/*" cualquier video -->
+        <!-- accept="audio/*" cualquier audio -->
+        <!-- accept=".pdf" una determinada extensión -->
+        <!-- accept="image/*" con capture="camera" -->
+        <!-- accept="video/*" con capture="camcorder" -->
+        <!-- accept="audio/*" con capture="microphone" -->
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con input button</h3>
+    <form name="encuesta" method="post"
+          action="http://pagina.com/send.php">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+        <!-- Botón que necesita evento -->
+        <input type="button" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con imagen como botón</h3>
+    <form name="encuesta" method="post"
+          action="http://pagina.com/send.php">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+        <!-- Imagen  como botón -->
+        <input type="image" src="./img/play.png">
+    </form>
+    <hr>
+    <h3>Formulario con elemento button</h3>
+    <form name="encuesta" method="post"
+          action="http://pagina.com/send.php">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+        <!-- Elemento button -->
+        <button type="submit">
+            Enviar <i class="fab fa-angular"></i>
+        </button>
+    </form>
+    <hr>
+    <h3>Formulario con botón tipo reset</h3>
+    <form name="encuesta" method="post"
+          action="http://pagina.com/send.php">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos">
+        <!-- Botón de envío -->
+        <button type="submit">
+            Enviar <i class="fab fa-angular"></i>
+        </button>
+        <!-- Botón de reseteado -->
+        <button type="reset">
+            Inicializar
+        </button>
+    </form>
+</body>
+</html>

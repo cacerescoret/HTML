@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Imágenes</title>
+    <!-- Ejemplo de favicon sencillo -->
+    <link rel="shortcut icon" 
+          href="favicon.ico" 
+          type="image/x-icon">
+</head>
+<body>
+    <!-- Ejemplo de imagen -->
+    <img src="img/caceres.jpg" 
+         alt="Imagen de la plaza mayor">
+    <!-- Ejemplo de Imagen png con transparencia -->
+    <div style="background-color: coral">
+        <img src="img/tux.png" 
+             alt="Pingüino Linux">
+    </div>
+    <!-- Ejemplo de figura en formato svg -->
+    <img src="img/minions.svg" 
+         alt="Minion" height="150">
+    <!-- Ejemplo de figura en formato gif -->
+    <img src="img/spinner.gif" width="100"
+         alt="cargando...">
+    <hr>
+    <!-- Ejemplo de elemento picture -->
+    <picture>
+        <source srcset="img/caceresxl.jpg"
+                media="(min-width: 900px)">
+        <source srcset="img/caceresl.jpg"
+                media="(min-width: 600px)">
+        <source srcset="img/caceresm.jpg"
+                media="(max-width: 600px)">
+        <img src="img/caceresm.jpg" 
+             alt="caceres">
+    </picture>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tablas en HTML</title>
+</head>
+<body>
+    <!-- Tabla con cabecera -->
+    <table border>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Ciudad</th>
+            <th>Edad</th>
+        </tr>
+        <tr>
+            <td>Juan</td>
+            <td>Pérez</td>
+            <td>Cáceres</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <!-- abreviatura td*4 -->
+            <td>María</td>
+            <td>Fernández</td>
+            <td>Plasencia</td>
+            <td>30</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- Tabla con atributo colspan -->
+    <table border>
+        <tr>
+            <th colspan="2">Nombre y Apellidos</th>
+            <th>Ciudad</th>
+            <th>Edad</th>
+        </tr>
+        <tr>
+            <td>Juan</td>
+            <td>Pérez</td>
+            <td>Cáceres</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>María</td>
+            <td>Fernández</td>
+            <td>Plasencia</td>
+            <td>30</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- Tabla con cabecera múltiple -->
+    <table border>
+        <tr>
+            <th colspan="2">Datos Personales</th>
+            <th colspan="2">Residencia</th>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Código Postal</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr>
+            <td>Luis</td>
+            <td>López</td>
+            <td>10.005</td>
+            <td>Cáceres</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- Tabla con cabecera lateral -->
+    <table border>
+        <tr>
+            <th>Nombre</th>
+            <td>Carlos</td>
+            <td>Luisa</td>
+            <td>Laura</td>
+        </tr>
+        <tr>
+            <th>Apellidos</th>
+            <td>Pérez</td>
+            <td>López</td>
+            <td>González</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- Tabla con atributo rowspan -->
+    <table border>
+        <tr>
+            <th rowspan="2">% por sexo</th>
+            <th>Hombres</th>
+            <td>46 %</td>
+        </tr>
+        <tr>
+            <th>Mujeres</th>
+            <td>54 %</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- Tabla múltiple -->
+    <table border>
+        <tr>
+            <th colspan="2">Ciudad</th>
+            <th>E</th>
+            <th>F</th>
+            <th>M</th>
+            <th>A</th>
+            <th>M</th>
+            <th>J</th>
+        </tr>
+        <tr>
+            <th rowspan="2">Cáceres</th>
+            <th>Max.</th>
+            <td>12</td>
+            <td>14</td>
+            <td>16</td>
+            <td>18</td>
+            <td>20</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <th>Min.</th>
+            <td>4</td>
+            <td>6</td>
+            <td>8</td>
+            <td>10</td>
+            <td>12</td>
+            <td>14</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- Tabla con elementos adicionales -->
+    <table border>
+        <caption>Temperaturas Medias</caption>
+        <thead>
+            <tr>
+                <th>Mes</th>
+                <th>Tª</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Abril</td>
+                <td>18 ºC</td>
+            </tr>
+            <tr>
+                <td>Mayo</td>
+                <td>20 ºC</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Media</th>
+                <td>19 ºC</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

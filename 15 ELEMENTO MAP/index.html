@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elemento Map</title>
+</head>
+<body>
+    <h1>Elemento Map</h1>
+    <img src="./img/caceres.PNG" 
+         alt="Mapa de Cáceres"
+         usemap="#mapacaceres">
+    <map name="mapacaceres">
+        <area shape="rect" coords="0,0,300,300" 
+        href="noroeste.html">
+        <area shape="rect" coords="300,0,600,300" 
+        href="noreste.html">
+        <area shape="rect" coords="300,300,600,600" 
+        href="sureste.html">
+        <area shape="rect" coords="0,300,300,600" 
+        href="suroeste.html">
+        <!-- opción con forma círculo (poco utilizada) -->
+        <!-- <area shape="circle" coords="300,300,200" 
+        href="suroeste.html"> -->
+        <!-- opción con forma poligonal (muy utilizada) -->
+        <!-- <area shape="poly" 
+              coords="100,100,300,100,400,200,300,300,200,200" 
+              href="suroeste.html"> -->
+    </map>
+</body>
+</html>

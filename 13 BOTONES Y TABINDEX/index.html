@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Botones y tabindex</title>
+</head>
+<body>
+    <h3>Ejemplo de botones</h3>
+    <button onclick="alert('Hola Mundo!')"
+        tabindex="8">
+        Saluda
+    </button>
+    <hr>
+    <button onclick="window.history.back()"
+        tabindex="7">
+        Anterior
+    </button>
+    <button onclick="window.history.forward()"
+        tabindex="6">
+        Siguiente
+    </button>
+    <hr>
+    <form name="encuesta" method="post"
+          action="http://pagina.com/send.php">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre"
+               tabindex="1">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos"
+               tabindex="2">
+        <label for="domicilio">Domicilio</label>
+        <input type="text" name="domicilio"
+               tabindex="3">
+        <label for="localidad">Localidad</label>
+        <input type="text" name="localidad"
+               tabindex="4">
+        <!-- Con alt + letra situa el foco 
+            en el elemento -->
+        <input type="submit" value="Enviar"
+               tabindex="5" accesskey="k"> 
+    </form>
+</body>
+</html>

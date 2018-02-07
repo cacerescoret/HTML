@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularios 2</title>
+</head>
+<body>
+    <style>
+        form {
+            padding-bottom: 80px;
+        }
+    </style>
+    <h2>Otros elementos para formularios</h2>
+    <hr>
+    <h3>Formulario con textarea</h3>
+    <form name="encuesta" method="post"
+          action="http://pagina.com/send.php">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos">
+        <label for="aficiones">Aficiones</label>
+        <textarea name="aficiones"  
+                  cols="80" rows="15">
+        </textarea>
+        <!-- Botón de envío -->
+        <button type="submit">
+            Enviar 
+        </button>
+    </form>
+    <hr>
+    <h3>Formulario con select</h3>
+    <form name="encuesta" method="post"
+          action="http://pagina.com/send.php">
+        <label for="marca">
+            Seleccione marca
+        </label>
+        <select name="marca"> <!-- multiple -->
+            <option value="Apple">Apple</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Xiaomi">Xiaomi</option>
+            <option value="BQ">BQ</option>
+        </select>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con select y optgroup</h3>
+    <form name="encuesta" method="post"
+          action="http://pagina.com/send.php">
+        <label for="producto">
+            Seleccione producto
+        </label>
+        <select name="producto">
+            <optgroup label="Ordenadores">
+                <option value="PC">PC de sobremesa</option>
+                <option value="Portátiles">Portátiles</option>
+                <option value="Netbooks">Netbooks</option>
+            </optgroup>
+            <optgroup label="Periféricos">
+                <option value="Impresoras">Impresoras</option>
+                <option value="Teclados">Teclados</option>
+                <option value="Ratones">Ratones</option>
+            </optgroup>
+        </select>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con datalist</h3>
+    <form name="encuesta" method="post"
+          action="http://pagina.com/send.php">
+        <label for="deportes">
+            Seleccione su deporte
+        </label>
+        <input type="list" name="deportes"
+                list="listadeportes">
+        <datalist id="listadeportes">
+            <option value="Fútbol">Fútbol</option>
+            <option value="Baloncesto">Baloncesto</option>
+            <option value="Tenis">Tenis</option>
+        </datalist>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con fieldset y legend</h3>
+    <form name="encuesta" method="post"
+          action="http://pagina.com/send.php">
+        <fieldset>
+            <legend>Nombre y Apellidos</legend>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos">
+        </fieldset>
+        <fieldset>
+            <legend>Dirección</legend>
+            <label for="domicilio">Domicilio</label>
+            <input type="text" name="domicilio">
+            <label for="localidad">Localidad</label>
+            <input type="text" name="localidad">
+        </fieldset>
+        <input type="submit" value="Enviar">
+    </form>
+    </body>
+</html>

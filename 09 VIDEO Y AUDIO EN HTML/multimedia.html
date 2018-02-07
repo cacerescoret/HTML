@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video y Audio</title>
+</head>
+<body>
+    <!-- Ejemplo de video -->
+    <video src="video/Summer_Place_Flyby.mp4"
+           width="640" controls 
+           autoplay loop muted>
+    </video>
+    <hr>
+    <!-- Ejemplo de video con atributo poster -->
+    <video src="video/Summer_Place_Flyby.mp4"
+           width="640" controls 
+           loop muted
+           poster="img/forotv.jpg"
+           preload="none">
+    </video>
+    <hr>
+    <!-- Ejemplo de video con marca de tiemp -->
+    <video src="video/Summer_Place_Flyby.mp4#t=5,8"
+           width="640" controls>
+    </video>
+    <hr>
+    <!-- Ejemplo de video con subtítulos -->
+    <video controls width="640">
+        <source src="video/Summer_Place_Flyby.mp4">
+        <track src="video/sub_es.vtt"
+               srclang="es"
+               label="Español"
+               default> 
+        <track src="video/sub_es.vtt"
+                srclang="en"
+                label="English">     
+    </video>
+    <hr>
+    <!-- Ejemplo de audio -->
+    <audio src="audio/jazz.mp3"
+           controls autoplay></audio>
+</body>
+</html>
